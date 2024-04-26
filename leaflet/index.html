@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Tutorial Test Github</title>
+
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+     <!-- Leaflet Javascript -->
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+     <!-- Leaflet Draw Plugin -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+
+    <!-- Jquery Plugin -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <!--Leaflet-Ajax-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js" integrity="sha512-Abr21JO2YqcJ03XGZRPuZSWKBhJpUAR6+2wH5zBeO4wAw4oksr8PRdF+BKIRsxvCdq+Mv4670rZ+dLnIyabbGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <div id="navbar">
+      <h1>HOTEL ROOM BOOKING SYSTEM</h1>
+    </div>
+    <div id="cont">
+        <div id="map">
+          <button onclick="changeUrl('./r2.geojson')" type="button" id="upstair">Upstair</button>
+          <button onclick="changeUrl('./ff1.geojson')" type="button" id="downstair">Downstair</button>
+        </div>
+        
+        <div id="sidebar">
+          <h1 >Room <span id="roomid"> </span></h1>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+  var roomid = document.querySelector("#roomid");
+
+  var buildingStyle = {
+    fillColor: 'purple',
+    color: '#ffffff'
+  }
+
+  var style = {
+      fillColor: 'green',
+      fillOpacity: 0.5,
+      weight: 2,
+      opacity: 1,
+      color: '#ffffff',
+      dashArray: '3'
+  };
+
+  var highlight = {
+      'fillColor': 'yellow',
+      'weight': 2,
+      'opacity': 1
+  };
+
+  function forEachFeature(feature, layer) {
+      layer.on("click", function (e) { 
+          stateLayer.setStyle(style); //resets layer colors
+          layer.setStyle(highlight);  //highlights selected.
+          var outid = layer.feature.properties.id;
+          roomid.innerText = outid;
+      }); 
+  }
+
+  var stateLayer = L.geoJson(null, {onEachFeature: forEachFeature, style: style});
+  var buildingLayer = L.geoJson(null, {style: buildingStyle});
+
+  var url = './ff1.geojson';
+  var buildUrl = './build.geojson';
+
+  function changeUrl(url) {
+      $.getJSON(url, function(data) {
+          stateLayer.clearLayers(); 
+          stateLayer.addData(data); 
+      });
+  }
+
+  var map = L.map('map');
+  
+  $.getJSON(buildUrl, function(data) { // Set bounds after data is loaded
+      buildingLayer.addData(data);
+      var bound = buildingLayer.getBounds();
+      map.setMaxBounds(bound);
+      map.on('drag', function() {
+          map.panInsideBounds(bound, { animate: false });
+      });
+      buildingLayer.addTo(map);
+      map.fitBounds(bound);
+      map.setMinZoom(map.getBoundsZoom(bound));
+      console.log("Done building layer")
+  });
+
+  $.getJSON(url, function(data) {
+      stateLayer.addData(data);
+      stateLayer.addTo(map);
+      console.log("Done room layer")
+  });
+</script>
