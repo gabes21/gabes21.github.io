@@ -153,7 +153,7 @@ h4 {
 .projects ul li {
     display: flex;
     flex-direction: column;
-    margin: 0 0 10px 0;
+    margin-bottom: 10px;
     background-color: white;
     border: 3px solid black;
     width: 100%;
