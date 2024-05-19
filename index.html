@@ -9,29 +9,32 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <div class="navbar">
-            <div>
-                <ul>
-                    <li>About me</li>
-                    <li>Skills</li>
-                    <li>Projects</li>
-                    <li class="button">Contact Me</li>
-                </ul>
+        <div class="navcontain">
+            <div class="navbar">
+                <div>
+                    <ul class="left">
+                        <li>Brendon Albert</li>
+                    </ul>
+                    <div class="right">
+                        <a href="">About me</a>
+                        <a href="">Skills</a>
+                        <a href="">Projects</a>
+                        <a href="" class="button">Contact Me</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="greeting">
                 <h1>Hello, I am <span>Brendon Albert</span></h1>
-                <p>Web Developer</p>
+                <p>I am a Web Developer</p>
             </div>
             <div class="background">
                 <div class="title">
-                    <h4>ABOUT ME</h4>
-                    <ul>
-                        <li>Download CV</li>
-                    </ul>
+                    <h2>ABOUT ME</h2>
+                    <a class="button" href="/">Download CV</a>
                 </div>
-                <ul>
+                <ul class="story">
                     <li>I am a web developer based in Sabah, Malaysia.</li>
 
                     <li>I love building web-apps and everything in between. I recently graduated from Universiti Teknologi Malaysia after completing Bachelor of Science in Geoinformatics and I am ready for some work.</li>
@@ -43,83 +46,92 @@
                     <li>When I am not in front of a computer, I am probably reading books or playing video games.</li>
                 </ul>
             </div>
-            <div class="details">
-                <div class="skills">
-                    <h4>SKILLS</h4>
-                    <ul>
-                        <li class="col1-item1">HTML</li>
-                        <li class="col1-item2">CSS</li>
-                        <li class="col1-item3">Javascript</li>
-        
-                        <li class="col2-item1">PHP</li>
-                        <li class="col2-item2">Laravel</li>
-                        <li class="col2-item3">SQL</li>
-        
-                        <li class="col3-item1">Angular</li>
-                        <li class="col3-item2">Visual Studio Code</li>
-                        <li class="col3-item3">Bootstrap</li>
-        
-                        <li class="col4-item1">SASS</li>
-                        <li class="col4-item2">Python</li>
-                        <li class="col4-item3">QGIS</li>
-        
-                        
-                    </ul>
-                </div>
-                <div class="projects">
-                    <h4>PROJECTS</h4>
+            <div class="skills">
+                <h4>SKILLS</h4>
+                <ul>
+                    <li class="col1-item1">HTML</li>
+                    <li class="col1-item2">CSS</li>
+                    <li class="col1-item3">Javascript</li>
+    
+                    <li class="col2-item1">PHP</li>
+                    <li class="col2-item2">Laravel</li>
+                    <li class="col2-item3">SQL</li>
+    
+                    <li class="col3-item1">Angular</li>
+                    <li class="col3-item2">Visual Studio Code</li>
+                    <li class="col3-item3">Bootstrap</li>
+    
+                    <li class="col4-item1">SASS</li>
+                    <li class="col4-item2">Python</li>
+                    <li class="col4-item3">QGIS</li>
+    
+                    
+                </ul>
+            </div>
+            <div class="projects">
+                <h2>PROJECTS</h2>
+                <div class="projcontain">
+                    <div class="circle cleft">
+                        <div class="arrow left"></div>
+                    </div>
                     <ul>
                         <li>
-                            <h4>Personal Website</h4>
-                            <img src="./asset/personalwebsite.JPG"  alt="Personal Website">
-                            <p>A website that shows an information about myself</p>
+                            <h4 class="projtitle">Personal Website</h4>
+                            <img class="projimage" src="./asset/personalwebsite.JPG"  alt="Project Image">
+                            <p class="projdesc">A website that shows an information about myself</p>
                             <div class="techs">
                                 <div>HTML</div>
                                 <div>CSS</div>
                             </div>
         
                         </li> 
-                        <li>
-                            <h4>Room Booking System</h4>
-                            <video controls src="./asset/RoomBooking.mp4"></video>
-                            <p>A website that allows for the booking of available room based on specified date with a little interactive map</p>
-                            <div class="techs">
-                                <div>HTML</div>
-                                <div>CSS</div>
-                                <div>TypeScript</div>
-                                <div>PHP</div>
-                                <div>Angular</div>
-                                <div>Leaflet</div>
-                            </div>
-                        </li>
-                        <li>
-                            <h4>Book Booking System</h4>
-                            <video controls src="./asset/BookBooking.mp4"></video>
-                            <p>A website that allows for the booking of books based on availibility on the specified date</p>
-                            <div class="techs">
-                                <div>HTML</div>
-                                <div>CSS</div>
-                                <div>PHP</div>
-                                <div>Laravel</div>
-                                <div>MySQL</div>
-                                <div>Javascript</div>
-                            </div>
-                        </li>
-                         <li>
-                            <h4>Jujutsu Kaisen Character Win/Loss Rate API</h4>
-                            <img src="./asset/jjkapi.JPG"  alt="JJK Character Win/Loss Ratio API">
-                            <p>An API that shows the win loss score of characters from a popular anime series Jujutsu Kaisen with Create and Update capability.</p>
-                            <div class="techs">
-                                <div>HTML</div>
-                                <div>CSS</div>
-                                <div>PHP</div>
-                                <div>Laravel</div>
-                                <div>MySQL</div>
-                            </div>
-                        </li>
                     </ul>
+                    <div class="circle cright">
+                        <div class="arrow right"></div>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <script src="script.js"></script>
     </body>
 </html>
+
+<!-- <li>
+    <h4>Room Booking System</h4>
+    <video controls src="./asset/RoomBooking.mp4"></video>
+    <p>A website that allows for the booking of available room based on specified date with a little interactive map</p>
+    <div class="techs">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>TypeScript</div>
+        <div>PHP</div>
+        <div>Angular</div>
+        <div>Leaflet</div>
+    </div>
+</li>
+<li>
+    <h4>Book Booking System</h4>
+    <video controls src="./asset/BookBooking.mp4"></video>
+    <p>A website that allows for the booking of books based on availibility on the specified date</p>
+    <div class="techs">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>PHP</div>
+        <div>Laravel</div>
+        <div>MySQL</div>
+        <div>Javascript</div>
+    </div>
+</li>
+ <li>
+    <h4>Jujutsu Kaisen Character Win/Loss Rate API</h4>
+    <img src="./asset/jjkapi.JPG"  alt="JJK Character Win/Loss Ratio API">
+    <p>An API that shows the win loss score of characters from a popular anime series Jujutsu Kaisen with Create and Update capability.</p>
+    <div class="techs">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>PHP</div>
+        <div>Laravel</div>
+        <div>MySQL</div>
+    </div>
+</li> -->

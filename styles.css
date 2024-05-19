@@ -2,29 +2,50 @@
     max-width: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 html, body {
     height: 100%;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif, 'Brush Script MT';
+}
+
+.navcontain {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }
 
 .navbar {
+    width: 60%;
+    height: 80%;
     background-color: rgb(0 0 0 / 50%);
-    width: 100%;
-    height: 50px;
-    position: absolute;
+    border-radius: 10px;
     color: white;
-    display: flex;
-    justify-content: center;
+    margin: 5px;
+    border: 1px solid grey;
 }
 .navbar div {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    
 }
-.navbar ul {
+.navbar ul.left {
     list-style-type: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 32px;
+    font-family: "consolas";
+}
+
+.navbar div.right {
     display: flex;
     justify-content: right;
     align-items: center;
@@ -32,15 +53,30 @@ html, body {
     width: 100%;
 }
 
-.navbar ul li {
+.navbar ul.left li {
+    margin-left: 20px;
+}
+
+.navbar div.right a {
+    text-decoration: none;
+    color: white;
     margin-right: 20px;
 }
 
-.navbar ul li.button {
-    background-color: orange;
+.button {
+    background-color: rgb(244, 174, 43);
     padding: 10px;
     border-radius: 25px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
 
+.button:hover {
+    background-color: rgb(219, 214, 205);
+    padding: 10px;
+    border-radius: 25px;
+    color: black;
 }
 
 .container {
@@ -49,11 +85,6 @@ html, body {
     background-image: linear-gradient(to right, black , darkblue);
     overflow: scroll;
 }
-
-.container div{
-    margin-bottom: 20px;
-}
-
 
 .greeting {
     display: flex;
@@ -86,34 +117,25 @@ h4 {
 .background {
     height: 70%;
     display: flex;
-    justify-content: center;;
-    margin: 0 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
 }
 
 .background .title {
     width: 30%;
-    margin: 10px;
+    margin: 0 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.background .title h3{
-    background-color: blue;
-}
-
-.background .title ul{
-    padding: 10px;
+.background .title h2{
     text-align: center;
 }
 
-.background .title ul li {
-    padding: 10px;
-    background-color: orange;
-    border-radius: 25px;
-}
-
-.background ul {
+.background .story {
     list-style: none;
     margin: 20px;
     width: 70%;
@@ -127,30 +149,24 @@ h4 {
     margin-bottom: 20px;
 }
 
-
-.details {
-    height: 100%;
-    margin: 0 25%;
-}
-
-
 .skills {
-    height: 40%;
+    height: 60%;
     width: 100%;
-    background-color: pink;
+    background-color: blue;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .skills h4 {
-  width: 30%;
+    width: 30%;
 }
 
 .skills ul{
-  margin: 0;
-  padding: 0;
+  margin: 0 10px;
+  padding: 10px;
+  height: 90%;
   width: 70%;
-  border: 2px solid black;
   list-style: none;  
   display: grid; 
   grid-auto-columns: 1fr; 
@@ -195,16 +211,62 @@ h4 {
 
 .projects {
     height: auto;
-    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.projects h2{
+    margin: 10px;
+    color: white;
+}
+
+.projects .projcontain {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.projects .projcontain .circle .arrow {
+    border: solid rgb(244, 174, 43);
+    height: 20px;
+    width: 20px;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+}
+
+.projects .projcontain .circle{
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
-.projects h4 {
-  width: 30%;
+.projects .projcontain .circle:hover{
+    background-color: lightgrey;
 }
 
-.projects ul {
+.projects .projcontain .circle .left {
+    transform: rotate(135deg);
+}
+
+.circle left {
+    background-color: red;
+}
+ 
+.projects .projcontain .circle .right {
+    transform: rotate(-45deg);
+}
+
+.projects .projcontain h4 {
+    width: 30%;
+}
+
+.projects .projcontain ul {
     list-style: none;
     width: 70%;
     margin: 0;
@@ -213,7 +275,7 @@ h4 {
   }
 
 
-.projects ul li {
+.projects .projcontain ul li {
     display: flex;
     flex-direction: column;
     margin: 0 0 0 0;
@@ -222,10 +284,10 @@ h4 {
     width: 100%;
   }
 
-.projects ul li h4 {
+.projects .projcontain ul li h4 {
     width: 100%;
 }
-.projects ul li p {
+.projects .projcontain ul li p {
     height: 100%;
     text-align: center;
     background-color: brown;
