@@ -402,7 +402,7 @@ img.projimage {
     }
 
     .skills {
-        margin: 0 50px;
+        margin: 0 15px;
     }
 }
 
@@ -410,6 +410,5 @@ img.projimage {
     .container {
         background-image: linear-gradient(to right, yellow , orange);
     }
-
 }
 
