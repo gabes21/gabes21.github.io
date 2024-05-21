@@ -76,6 +76,7 @@ html, body {
     margin: 10px;
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 
 .button:hover {
@@ -226,6 +227,7 @@ h4 {
 .col4-item3 { grid-area: col4-item3; }
 
 .projects {
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -242,6 +244,8 @@ h4 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    height: auto;
+    margin: 0;
 }
 
 .projects .projcontain .circle .arrow {
@@ -284,6 +288,7 @@ h4 {
 
 .projects .projcontain ul {
     list-style: none;
+    height: 90%;
     width: 70%;
     margin: 0;
     padding: 0;
@@ -294,23 +299,23 @@ h4 {
 .projects .projcontain ul li {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 0;
     background-color: white;
     border: 3px solid black;
     width: 100%;
+    height: auto;
   }
 
 .projects .projcontain ul li h4 {
     width: 100%;
 }
-.projects .projcontain ul li p {
-    height: 100%;
+.projects .projcontain ul li p.projdesc {
+    height: 10%;
     text-align: center;
     background-color: brown;
 }
 
 img.projimage {
-    height: 50%;
+    height: auto;
     width: 100%;
 }
 
@@ -335,6 +340,9 @@ img.projimage {
     }
     .navcontain {
         height: 90px; 
+    }
+    .anchor {
+        height: 90px;
     }
 
     .navbar ul.left {
@@ -402,5 +410,6 @@ img.projimage {
     .container {
         background-image: linear-gradient(to right, yellow , orange);
     }
+
 }
 
