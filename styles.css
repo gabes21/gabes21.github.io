@@ -12,8 +12,11 @@ html, body {
 .anchor {
     display: block;
     height: 70px;
-    margin-top: -70px;
     visibility: hidden;
+}
+
+.projanc {
+    height: 0;
 }
 
 .navcontain {
@@ -120,7 +123,6 @@ h4 {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 10px;
 }
 
 .background {
@@ -408,9 +410,18 @@ img.projimage {
         margin: 10px;
     }
 
+    .background{
+        justify-content: flex-start;
+    }
+
     .background .title h2{
         font-size: 21px;
 
+    }
+
+    .background .story {
+        width: 315.2px;
+        padding: 0;
     }
 
     .button {
@@ -419,6 +430,27 @@ img.projimage {
 
     .skills {
         margin: 0 15px;
+        height: 80%;
+    }
+
+    .skills h4 {
+        font-size: 21px;
+    }
+    
+    .skills ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .skills ul {
+        padding: 0;
+        margin: 0;
+        height: 80%;
+        width: 100%;
+    }
+
+    .skills li i {
+        font-size: 64px;
     }
 }
 
@@ -436,6 +468,26 @@ img.projimage {
     .background .story {
         font-size: 14px;
         width: 315.2px;
+    }
+
+    .skills h4 {
+        font-size: 21px;
+    }
+    
+    .skills ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .skills ul {
+        padding: 0;
+        margin: 0;
+        height: 80%;
+        width: 100%;
+    }
+
+    .skills li i {
+        font-size: 32px;
     }
 
 }
