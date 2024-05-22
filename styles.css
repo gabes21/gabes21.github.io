@@ -165,6 +165,7 @@ h4 {
     margin: 0 100px;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
 }
 
@@ -205,7 +206,7 @@ h4 {
   text-align: center;
 }
 .skills li i {
-    font-size: 32px;
+    font-size: 64px;
     margin-bottom: 10px;
 }
 
@@ -390,6 +391,10 @@ img.projimage {
         
     }
 
+    .navbar ul.left li {
+        margin-left: 0;
+    }
+
     .navbar  div div.right{
         display: flex;
         flex-direction: row;
@@ -401,14 +406,35 @@ img.projimage {
         margin: 10px;
     }
 
+    .background .title h2{
+        font-size: 21px;
+
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
     .skills {
         margin: 0 15px;
     }
 }
 
-@media(max-width: 500px){
+@media(max-width: 395px){
     .container {
         background-image: linear-gradient(to right, yellow , orange);
     }
+
+    .background .title {
+        width: 100%;
+        margin: 0 10px;
+        height: auto;
+    }
+
+    .background .story {
+        font-size: 14px;
+        width: 315.2px;
+    }
+
 }
 
