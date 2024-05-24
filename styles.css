@@ -15,10 +15,6 @@ html, body {
     visibility: hidden;
 }
 
-.projanc {
-    height: 0;
-}
-
 .navcontain {
     display: flex;
     width: 100%;
@@ -90,7 +86,7 @@ html, body {
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: linear-gradient(to right, black , darkblue);
     overflow: scroll;
@@ -126,12 +122,13 @@ h4 {
 }
 
 .background {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
+    min-height: 0;
 }
 
 .background .title {
@@ -140,6 +137,8 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 20%;
 }
 
 .background .title h2{
@@ -147,10 +146,10 @@ h4 {
 }
 
 .background .story {
+    height: 70%;
     list-style: none;
     margin: 20px;
-    width: 70%;
-    padding-left: 20px;
+    width: 80%;
     display: flex;
     flex-direction: column;
     text-align: justify;
@@ -161,7 +160,7 @@ h4 {
 }
 
 .skills {
-    height: 90%;
+    height: 100vh;
     width: auto;
     background-color: rgb(43, 43, 55);
     border-radius: 25px;
@@ -232,24 +231,23 @@ h4 {
 
 .projects {
     width: auto;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 55px 20px 20px 20px;
+    justify-content: flex-start;
 }
 
 .projects h2{
-    margin: 10px;
     color: white;
-    text-align: center;
 }
 
 .projects .projcontain {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: auto;
+    height: 80%;
+    width: 100%;
     margin: 0;
 }
 
@@ -287,16 +285,14 @@ h4 {
     transform: rotate(-45deg);
 }
 
-.projects .projcontain h4 {
-    width: 30%;
-}
-
 .projects .projcontain ul {
     list-style: none;
-    height: 90%;
+    height: 100%;
     width: 70%;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
 
   }
 
@@ -312,15 +308,16 @@ h4 {
 
 .projects .projcontain ul li h4 {
     width: 100%;
+    height: auto;
 }
 .projects .projcontain ul li p.projdesc {
-    height: 10%;
+    height: auto;
     text-align: center;
     background-color: brown;
 }
 
 img.projimage {
-    height: auto;
+    height: 60%;
     width: 100%;
 }
 
@@ -338,10 +335,30 @@ img.projimage {
     margin: 10px;
 }
 
+@media(max-height: 440px){
+    .projects .projcontain ul li {
+        height: 100%;
+      }
+}
+
+@media(max-width: 1430px){
+    .container {
+        background-image: linear-gradient(to right, cyan, magenta);
+    }
+
+    .skills li i {
+        font-size: 40px;
+    }
+}
+
 /* Tablet and under */
 @media(max-width: 768px){
     .container {
         background-image: linear-gradient(to right, red , green);
+    }
+
+    .background{
+        height: auto;
     }
     .navcontain {
         height: 90px; 
@@ -363,7 +380,28 @@ img.projimage {
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: white;
+        margin: 0 15px;
+        height: 80%;
+    }
+
+    .skills ul {
+        padding: 0;
+        margin: 0;
+        height: 80%;
+        width: 100%;
+    }
+
+    .skills h4 {
+        font-size: 21px;
+    }
+
+    .skills li i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .skills li span {
+        font-size: 12px;
     }
 }
 
@@ -428,30 +466,17 @@ img.projimage {
         font-size: 14px;
     }
 
-    .skills {
-        margin: 0 15px;
-        height: 80%;
-    }
-
     .skills h4 {
         font-size: 21px;
-    }
-    
-    .skills ul {
-        padding: 0;
-        margin: 0;
-    }
-
-    .skills ul {
-        padding: 0;
-        margin: 0;
-        height: 80%;
-        width: 100%;
     }
 
     .skills li i {
         font-size: 64px;
     }
+
+    .projects .projcontain ul {
+        width: 80%;
+      }
 }
 
 @media(max-width: 395px){
