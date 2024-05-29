@@ -26,7 +26,7 @@ function addTechs(techs) {
 }
 
 function changeProj (proj) {
-    document.querySelector("h4.projtitle").innerHTML = proj[0]; 
+    document.querySelector("h5.projtitle").innerHTML = proj[0]; 
     document.querySelector("img.projimage").src = proj[1]; 
     document.querySelector("p.projdesc").innerHTML = proj[2]; 
     removeTechs();
