@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-color: red;
+            height: 100vh;
+            width: 300px;
+        }
+        .first {
+            background-color: yellow;
+            height: auto;
+            width: 300px;
+            transition: width 2s;
+        }
+
+        .first:hover {
+            width: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="first"></div>
+    </div>
+</body>
+</html>

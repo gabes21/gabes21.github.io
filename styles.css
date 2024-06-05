@@ -287,10 +287,6 @@ h4 {
     transform: rotate(135deg);
     margin-left: 15px;
 }
-
-.circle left {
-    background-color: red;
-}
  
 .projects .projcontain .circle .right {
     transform: rotate(-45deg);
@@ -312,14 +308,14 @@ h4 {
 .projects .projcontain ul li {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: black;
     border: 3px solid black;
     width: 100%;
     height: auto;
   }
 
 .projects .projcontain ul li h5 {
-    color: black;
+    color: white;
     width: 100%;
     height: 10%;
     text-align: center;
@@ -327,7 +323,26 @@ h4 {
 .projects .projcontain ul li p.projdesc {
     height: auto;
     text-align: center;
-    background-color: brown;
+    color: white;
+    background-color: rgb(43, 43, 55);
+    padding: 10px;
+}
+
+.projshow {
+    height: 100%;
+    width: 100%;
+    transition: width 2s;
+}
+
+@keyframes example {
+    0%   {transform: scaleX(0);}
+    100% {transform: scaleX(1);}
+  }
+
+.projanim {
+    transform: scaleX(1);
+    animation-name: example;
+    animation-duration: 1s;
 }
 
 img.projimage {
@@ -336,10 +351,18 @@ img.projimage {
     width: 100%;
 }
 
+video.projvideo {
+    height: auto;
+    max-height: 60%;
+    width: 100%;
+    display: none;
+    transition: width 2s;
+}
+
 .techs {
     height: auto;
     margin: 0;
-    background-color: pink;
+    background-color:rgb(150, 100, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,6 +370,8 @@ img.projimage {
 }
 
 .techs div {
+    background-color: rgb(43, 43, 55);
+    color: white;
     border: 1px solid blue;
     text-align: center;
     padding: 5px;
@@ -363,9 +388,9 @@ img.projimage {
 }
 
 @media(max-width: 1430px){
-    .container {
+    /* .container {
         background-image: linear-gradient(to right, cyan, magenta);
-    }
+    } */
 
     .skills li i {
         font-size: 40px;
@@ -374,9 +399,9 @@ img.projimage {
 
 /* Tablet and under */
 @media(max-width: 768px){
-    .container {
+    /* .container {
         background-image: linear-gradient(to right, red , green);
-    }
+    } */
 
     .navbar ul.left {
         font-size: 21px;
@@ -412,9 +437,9 @@ img.projimage {
 
 /* Mobile and under */
 @media(max-width: 665px){
-    .container {
+    /* .container {
         background-image: linear-gradient(to right, pink , purple);
-    }
+    } */
 
     .navcontain {
         height: 120px; 
@@ -477,9 +502,9 @@ img.projimage {
 }
 
 @media(max-width: 395px){
-    .container {
+    /* .container {
         background-image: linear-gradient(to right, yellow , orange);
-    }
+    } */
 
     .background .title {
         width: 100%;
