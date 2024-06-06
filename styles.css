@@ -4,24 +4,30 @@
 }
 
 html, body {
-    height: 100%;
-    overflow: hidden;
     font-family: Arial, Helvetica, sans-serif, 'Brush Script MT';
+}
+
+body {
+    height: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(150, 100, 0) );
+    display: flex;
+    flex-direction: column;
 }
 
 .anchor {
     display: block;
-    height: 12%;
+    height: 12vh;
     visibility: hidden;
 }
 
 .navcontain {
     display: flex;
     width: 100%;
-    height: 12%;
+    height: 12vh;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
+    top: 0;
     min-width: 310px;
 }
 
@@ -89,7 +95,7 @@ html, body {
 
 .container {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: linear-gradient(rgb(0, 0, 0), rgb(150, 100, 0) );
     overflow: auto;
     min-width: 320px;
@@ -143,12 +149,11 @@ h4 {
 
 .background .title {
     width: 30%;
-    margin: 0 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 20%;
+    height: 10%;
 }
 
 .background .title h4{
@@ -156,7 +161,7 @@ h4 {
 }
 
 .background .story {
-    height: 70%;
+    height: 50%;
     list-style: none;
     margin: 20px;
     width: 80%;
@@ -170,10 +175,10 @@ h4 {
 }
 
 .skills {
-    height: 80%;
+    height: 85vh;
     background-color: rgb(43, 43, 55);
     border-radius: 25px;
-    margin: 0 100px;
+    margin: 0 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,11 +247,12 @@ h4 {
 .col4-item3 { grid-area: col4-item3; }
 
 .projects {
-    height: 90%;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 10vh;
 }
 
 .projects h4{
@@ -362,7 +368,7 @@ video.projvideo {
 .techs {
     height: auto;
     margin: 0;
-    background-color:rgb(150, 100, 0);
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,6 +384,77 @@ video.projvideo {
     margin: 10px;
 }
 
+.contact {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.concon {
+    height: 50%;
+    width: 100%;
+    background-color: rgb(43, 43, 55);
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+.concon .h1con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 5vw;
+    width: 12vw;
+    border-radius: 100px;
+    position: relative;
+    bottom: 5.5vh;
+
+}
+.concon .h1con .up {
+    border-radius: 100px 100px 0 0;
+    height: 50%;
+    width: 100%;
+    background-color:  rgb(150, 100, 0);
+}
+
+.concon .h1con .down {
+    border-radius: 0 0 100px 100px;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(43, 43, 55);
+}
+.concon .h1con h1 {
+    color: white;
+    height: auto;
+    font-size: 2vw;
+    width: max-content;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.conlist {
+    color: white;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 2fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;
+}
+
+.conlist div{
+    text-align: center;
+}
+
+.footer {
+    background-color: red;
+    height: 20vh;
+}
+
+
 @media(max-height: 530px){
     .skills{
         height: auto;
@@ -388,20 +465,21 @@ video.projvideo {
 }
 
 @media(max-width: 1430px){
-    /* .container {
+     body {
         background-image: linear-gradient(to right, cyan, magenta);
-    } */
+    } 
 
     .skills li i {
         font-size: 40px;
     }
+
 }
 
 /* Tablet and under */
 @media(max-width: 768px){
-    /* .container {
+    body {
         background-image: linear-gradient(to right, red , green);
-    } */
+    } 
 
     .navbar ul.left {
         font-size: 21px;
@@ -413,9 +491,7 @@ video.projvideo {
     }
 
     .skills {
-        display: flex;
         flex-direction: column;
-        align-items: center;
         margin-inline: 15px;
     }
 
