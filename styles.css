@@ -69,11 +69,20 @@ body {
     margin-left: 10px;
 }
 
+.navbar ul.left li a {
+    text-decoration: none;
+    color: white;
+}
+
 .navbar div.right a {
     text-decoration: none;
     color: white;
     margin-right: 20px;
 }
+
+.navbar div.right a:hover {
+    text-decoration: underline;
+} 
 
 .button {
     background-color: rgb(244, 174, 43);
@@ -129,6 +138,10 @@ body {
     background-color: rgb(0 0 0 / 40%);
 }
 
+.greeting a {
+    color: white;
+}
+
 body h4 {
   display: flex;
   justify-content: center;
@@ -158,6 +171,7 @@ body h4 {
 
 .background .title h4{
     text-align: center;
+    text-decoration: underline orange;
 }
 
 .background .story {
@@ -187,7 +201,7 @@ body h4 {
 
 .skills h4 {
     width: 30%;
-    text-decoration: underline yellow;
+    text-decoration: underline orange;
 }
 
 .skills ul{
@@ -257,6 +271,7 @@ body h4 {
 
 .projects h4{
     margin-bottom: 10px;
+    text-decoration: underline orange;
 }
 
 .projects .projcontain {
@@ -268,7 +283,7 @@ body h4 {
 }
 
 .projects .projcontain .circle .arrow {
-    border: solid rgb(244, 174, 43);
+    border: solid 2px white;
     height: 20px;
     width: 20px;
     border-width: 0 3px 3px 0;
@@ -408,7 +423,7 @@ video.projvideo {
     grid-template-rows: repeat(10, 1fr); 
 }
 
-.conlist div {
+.conlist address {
     background-color: rgb(150, 100, 0);
     border-radius: 10px;
     display: flex;
@@ -421,18 +436,19 @@ video.projvideo {
 }
 
 
-.conlist div p {
+.conlist address a{
     height: auto;
     width: 100%;
 }
 
-.conlist div i {
+.conlist address i {
     height: auto;
     width: 100%;
     color: rgb(43, 43, 55);
 }
 
 .conlist h4 {
+    text-decoration: underline orange;
     grid-row: 1/3;
     grid-column: 5/7;
     display: flex;
@@ -456,11 +472,6 @@ video.projvideo {
     grid-column: 6/9;
     margin: 10px;
     
-}
-
-.footer {
-    background-color: red;
-    height: 20vh;
 }
 
 
@@ -586,7 +597,7 @@ video.projvideo {
     }
 }
 
-@media(max-width: 395px){
+@media(max-width: 427px){
     /* .container {
         background-image: linear-gradient(to right, yellow , orange);
     } */
