@@ -9,7 +9,7 @@ html, body {
 
 body {
     height: 100%;
-    background-image: linear-gradient(rgb(0, 0, 0), rgb(150, 100, 0) );
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(244, 174, 43));
     display: flex;
     flex-direction: column;
 }
@@ -129,7 +129,7 @@ body {
     background-color: rgb(0 0 0 / 40%);
 }
 
-h4 {
+body h4 {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -385,68 +385,77 @@ video.projvideo {
 }
 
 .contact {
-    height: 85vh;
+    height: 90vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(20, 0.25fr); 
+    grid-template-rows: repeat(20, 0.25fr);
+}
+
+.contact h4 {
+   margin-bottom: 10px;
+   grid-row: 5/6;
+   grid-column: 9/13;
 }
 
 .concon {
-    height: 50%;
-    width: 100%;
     background-color: rgb(43, 43, 55);
     border-top: 5px solid white;
     border-bottom: 5px solid white;
-}
-.concon .h1con {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    height: 5vw;
-    width: 12vw;
-    border-radius: 100px;
-    position: relative;
-    bottom: 5.5vh;
-
-}
-.concon .h1con .up {
-    border-radius: 100px 100px 0 0;
-    height: 50%;
-    width: 100%;
-    background-color:  rgb(150, 100, 0);
-}
-
-.concon .h1con .down {
-    border-radius: 0 0 100px 100px;
-    height: 50%;
-    width: 100%;
-    background-color: rgb(43, 43, 55);
-}
-.concon .h1con h1 {
-    color: white;
-    height: auto;
-    font-size: 2vw;
-    width: max-content;
-    margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    border-radius: 10px;
+    grid-row: 6/16;
+    grid-column: 1/21;
 }
 
 .conlist {
+    height: 100%;
+    width: 100%;
     color: white;
     display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-auto-rows: 2fr; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(10, 1fr); 
+    grid-template-rows: repeat(10, 1fr); 
 }
 
-.conlist div{
+.conlist div {
+    background-color: rgb(150, 100, 0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap; 
+    word-wrap: break-word; 
+    padding: 10px; 
+}
+
+
+.conlist div p {
+    height: auto;
+    width: 100%;
+}
+
+.conlist div i {
+    height: auto;
+    width: 100%;
+    color: rgb(43, 43, 55);
+}
+
+.conlist .email{
     text-align: center;
+    border: 2px solid black;
+    grid-row: 4/7;
+    grid-column: 2/5;
+}
+
+
+.conlist .phone{
+    text-align: center;
+    border: 2px solid black;
+    grid-row: 4/7;
+    grid-column: 7/10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .footer {
@@ -465,9 +474,9 @@ video.projvideo {
 }
 
 @media(max-width: 1430px){
-     body {
+     /* body {
         background-image: linear-gradient(to right, cyan, magenta);
-    } 
+    }  */
 
     .skills li i {
         font-size: 40px;
@@ -477,9 +486,9 @@ video.projvideo {
 
 /* Tablet and under */
 @media(max-width: 768px){
-    body {
+    /* body {
         background-image: linear-gradient(to right, red , green);
-    } 
+    }  */
 
     .navbar ul.left {
         font-size: 21px;
