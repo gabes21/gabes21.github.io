@@ -86,7 +86,7 @@ body {
 
 .button {
     background-color: rgb(244, 174, 43);
-    padding: 10px;
+    padding: 5px;
     border-radius: 25px;
     margin: 10px;
     text-decoration: none;
@@ -97,7 +97,6 @@ body {
 
 .button:hover {
     background-color: rgb(219, 214, 205);
-    padding: 10px;
     border-radius: 25px;
     color: black;
 }
@@ -401,17 +400,17 @@ video.projvideo {
 .contact {
     height: 90vh;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(20, 0.25fr); 
-    grid-template-rows: repeat(20, 0.25fr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .concon {
+    height: min-content;
     background-color: rgb(43, 43, 55);
     border-top: 5px solid white;
     border-bottom: 5px solid white;
-    grid-row: 6/16;
-    grid-column: 1/21;
+    width: 100%;
 }
 
 .conlist {
@@ -480,6 +479,12 @@ video.projvideo {
         height: auto;
     }
     .background{
+        height: auto;
+    }
+    .projects {
+        height: auto;
+    }
+    .contact {
         height: auto;
     }
 }
