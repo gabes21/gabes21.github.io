@@ -4,7 +4,9 @@ var pro1 = ["Personal Website", "./asset/personalwebsite.JPG", "A website that s
 var pro2 = ["Room Booking System", "./asset/Roombooking.mp4", "A website that allows for the booking of available room based on specified date with a little interactive map", ["HTML5", "CSS", "TypeScript", "PHP", "Angular", "Leaflet"]];
 var pro3 = ["Book Booking System", "./asset/Bookbooking.mp4", "A website that allows for the booking of books based on availibility on the specified date", ["HTML5", "CSS", "PHP", "Laravel", "MySQL", "Javascript"]];
 var pro4 = ["Jujutsu Kaisen Character Win/Loss Rate API", "./asset/jjkapi.JPG", "An API that shows the win loss score of characters from a popular anime series Jujutsu Kaisen with Create and Update capability.", ["HTML", "CSS", "PHP", "Laravel", "MySQL"]];
-var projects = [pro1, pro2, pro3, pro4];
+var pro5 = ["Image Selector", "./asset/ImageSelector.mp4", "A desktop application that allow images within a folder to be display and user can upload the image being displayed directly into targetted folder with a click of a button.", ["HTML", "CSS", "Electron", "React"]];
+
+var projects = [pro1, pro2, pro3, pro4, pro5];
 var i = 0;
 
 function removeTechs(){
